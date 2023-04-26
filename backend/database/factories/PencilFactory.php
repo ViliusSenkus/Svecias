@@ -17,7 +17,11 @@ class PencilFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'pavadinimas' => fake()->sentence(2),
+            'aprašymas'	=> fake()->sentence(rand(25,50)),
+            'kiekis_sandely' => rand(0, 100),
+            'kaina' => rand(0, 1000).'.'.rand(0, 99),
+            'foto_nuoroda' => 'https://picsum.photos/768/768/?q='.rand(0, 5000),
         ];
     }
 }
